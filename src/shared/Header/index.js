@@ -8,7 +8,7 @@ import FTypography from '../../components/FTypography';
 const Header = () => {
     const navigate = useNavigate();
 
-    const handleLogoClick = () => navigate('/home');
+    const handleLogoClick = () => navigate('/');
 
     return (
         <>

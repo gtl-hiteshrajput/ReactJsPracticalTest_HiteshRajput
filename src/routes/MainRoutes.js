@@ -12,10 +12,6 @@ const MainRoutes = {
             element: <Posts />
         },
         {
-            path: '/home',
-            element: <Posts />,
-        },
-        {
             path: '/post/:id',
             element: <PostDetails />,
         },
