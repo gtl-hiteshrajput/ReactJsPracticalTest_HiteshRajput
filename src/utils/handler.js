@@ -1,5 +1,5 @@
-import FLoader from "../components/FLoader";
-import { requestStatus } from "../constant";
+import FLoader from '../components/FLoader';
+import { requestStatus } from '../constant';
 
 const { idle, loading, success } = requestStatus;
 

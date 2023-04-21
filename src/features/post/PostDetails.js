@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Box, Divider, Grid, Modal } from '@mui/material';
 
 import { requestStatus } from '../../constant';
@@ -30,6 +30,8 @@ const PostDetails = () => {
 
     const dispatch = useDispatch();
     const { posts: post = {}, status, getPostError } = useSelector(selectPost);
+
+    const navigation = useNavigate();
 
     const [Loader, setLoader] = useState(null);
     const [modelOpen, setModelOpen] = useState(false);
@@ -69,6 +71,15 @@ const PostDetails = () => {
                                 (status === success && post !== null) &&
                                 <FCardDetail key={post?.id} post={post} onProfileClick={onProfileClick} />
                             }
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={12}>
+                            <FButton
+                                variant='contained'
+                                type='submit'
+                                size='large'
+                                text='Back to List'
+                                sx={{ backgroundColor: '#1976d2' }}
+                                onClick={() => navigation('/')} />
                         </Grid>
                     </Grid>
                 </Grid>

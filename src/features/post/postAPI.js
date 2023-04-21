@@ -27,7 +27,6 @@ export const getPostById = async (id) => {
     return new Promise((resolve, reject) => {
         apiController(postEndPoints, null, null, get)
             .then(async (res) => {
-                console.log('res', res);
                 const { data: { userId = null } = {} } = res;
                 if (userId) {
                     const userInfo = await getUserById(userId);

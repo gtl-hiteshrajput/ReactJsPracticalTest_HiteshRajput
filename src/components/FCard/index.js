@@ -5,7 +5,6 @@ import { Avatar, Card, CardActions, CardContent, CardHeader, IconButton, Tooltip
 
 const FCard = ({ post: { title, body, id: postId } = {} }) => {
     const navigate = useNavigate();
-    console.log('title', title);
 
     const handleFweetInfo = (postId) => {
         navigate(`/post/${postId}`);

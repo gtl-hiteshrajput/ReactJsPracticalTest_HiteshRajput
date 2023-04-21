@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
+import HomeIcon from '@mui/icons-material/Home';
 import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
 
-import HomeIcon from '@mui/icons-material/Home';
 import FTypography from '../../components/FTypography';
 
 

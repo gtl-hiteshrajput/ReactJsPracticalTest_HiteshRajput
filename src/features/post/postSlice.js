@@ -34,10 +34,12 @@ export const postSlice = createSlice({
         builder
             .addCase(getPosts.pending, (state) => {
                 state.status = idle;
+                state.getPostsError = {};
             })
             .addCase(getPosts.fulfilled, (state, action) => {
                 state.status = success;
                 state.posts = action.payload;
+                state.getPostsError = {};
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.status = failed;
@@ -45,10 +47,12 @@ export const postSlice = createSlice({
             })
             .addCase(getPost.pending, (state, action) => {
                 state.status = idle;
+                state.getPostError = {};
             })
             .addCase(getPost.fulfilled, (state, action) => {
                 state.status = success;
                 state.posts = action?.payload;
+                state.getPostError = {};
             })
             .addCase(getPost.rejected, (state, action) => {
                 state.status = failed;

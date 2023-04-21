@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Box } from '@mui/material';
+
 import Header from '../../shared/Header';
 
 // ==============================|| MAIN LAYOUT ||============================== //
